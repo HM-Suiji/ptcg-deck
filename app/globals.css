@@ -1,0 +1,7 @@
+@import 'tailwindcss';
+@plugin "daisyui";
+@import '../styles/theme.css';
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}

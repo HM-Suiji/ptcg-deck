@@ -1,0 +1,7 @@
+.clip-left-bg {
+  clip-path: polygon(0 0, 55% 0, 45% 100%, 0 100%);
+}
+
+.clip-right-bg {
+  clip-path: polygon(55% 0, 100% 0, 100% 100%, 45% 100%);
+}

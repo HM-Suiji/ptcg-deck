@@ -1,0 +1,12 @@
+# Ignore artifacts:
+build
+coverage
+node_modules
+.next
+out
+public
+
+# Ignore files:
+*.log
+*.lock
+bun.lockb

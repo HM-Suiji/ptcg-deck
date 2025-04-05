@@ -8,6 +8,8 @@ This is an online PTCG (Pokémon Trading Card Game) battle project, allowing you
 
 # Project Preview
 
+<https://ptcg.huan-ment.top/>
+
 # Features
 
 - 🎮 Support for online and local battle modes

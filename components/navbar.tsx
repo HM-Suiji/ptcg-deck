@@ -8,7 +8,7 @@ import { useState, useRef, useEffect } from 'react'
 
 export const Navbar: React.FC = () => {
   const [visible, setVisible] = useState(false)
-  const timerRef = useRef(null)
+  const timerRef = useRef<ReturnType<typeof setTimeout>>(null)
 
   const clearHideTimer = () => {
     if (timerRef.current) {

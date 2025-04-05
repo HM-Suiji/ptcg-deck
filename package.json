@@ -9,6 +9,7 @@
     "lint": "next lint --fix"
   },
   "dependencies": {
+    "jotai": "^2.12.2",
     "lucide-react": "^0.487.0",
     "motion": "^12.6.3",
     "next": "15.2.4",

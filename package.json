@@ -9,10 +9,14 @@
     "lint": "next lint --fix"
   },
   "dependencies": {
+    "@react-aria/ssr": "^3.9.7",
+    "@react-aria/visually-hidden": "^3.8.21",
+    "clsx": "^2.1.1",
     "jotai": "^2.12.2",
     "lucide-react": "^0.487.0",
     "motion": "^12.6.3",
     "next": "15.2.4",
+    "next-themes": "^0.4.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },

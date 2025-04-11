@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { Wifi, Globe } from 'lucide-react'
-import './index.css'
 
 export default function ModePage() {
   return (
@@ -114,12 +113,6 @@ export default function ModePage() {
                 </motion.div>
               </Link>
             </motion.div>
-          </div>
-
-          {/* 添加背景色区域 */}
-          <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-            <div className="absolute inset-0 bg-primary/10 clip-left-bg"></div>
-            <div className="absolute inset-0 bg-secondary/5 clip-right-bg"></div>
           </div>
         </div>
       </div>

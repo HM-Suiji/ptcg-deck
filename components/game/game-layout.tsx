@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export const GameLayout = () => {
   return (
-    <div className="h-screen bg-base-100 text-base-content relative overflow-hidden">
+    <div className="h-screen bg-base-100 text-base-content relative overflow-hidden select-none">
       {/* 背景 */}
       <div className="absolute inset-0 opacity-30 mix-blend-multiply">
         <Image
@@ -42,7 +42,7 @@ export const GameLayout = () => {
       {/* 对手区域 */}
       <div className="absolute top-0 left-0 right-0 h-[50%] bg-base-200/50 border-b border-neutral/20">
         {/* 对手手牌区 */}
-        <div className="absolute left-1/2 top-4 !-translate-x-1/2">
+        <div className="absolute left-1/2 top-4 !-translate-x-1/2 !-translate-y-3/5 hover:!translate-y-0 transition-transform duration-300">
           <div className="w-96 h-24 border border-neutral/30 rounded-md bg-neutral/10 flex justify-center items-center">
             <span className="text-xs text-neutral">手牌区</span>
           </div>
@@ -79,16 +79,16 @@ export const GameLayout = () => {
         {/* 右侧区域 - 对手奖赏卡区 */}
         <div className="absolute right-0 bottom-0 w-20 p-1">
           <div className="relative">
-            <div className="h-20 border border-neutral/30 rounded-md bg-base-100/70 absolute left-1/3 w-14 z-20"></div>
-            <div className="h-20 border border-neutral/30 rounded-md bg-base-100/70 relative w-14"></div>
+            <div className="h-20 border border-neutral/30 rounded-md bg-base-100/70 relative ml-auto w-14"></div>
+            <div className="h-20 border border-neutral/30 rounded-md bg-base-100/70 absolute top-0 right-1/3 w-14 z-20"></div>
           </div>
           <div className="relative mt-2">
-            <div className="h-20 border border-neutral/30 rounded-md bg-base-100/70 absolute left-1/3 w-14 z-20"></div>
-            <div className="h-20 border border-neutral/30 rounded-md bg-base-100/70 relative w-14"></div>
+            <div className="h-20 border border-neutral/30 rounded-md bg-base-100/70 relative ml-auto w-14"></div>
+            <div className="h-20 border border-neutral/30 rounded-md bg-base-100/70 absolute top-0 right-1/3 w-14 z-20"></div>
           </div>
           <div className="relative mt-2">
-            <div className="h-20 border border-neutral/30 rounded-md bg-base-100/70 absolute left-1/3 w-14 z-20"></div>
-            <div className="h-20 border border-neutral/30 rounded-md bg-base-100/70 relative w-14"></div>
+            <div className="h-20 border border-neutral/30 rounded-md bg-base-100/70 relative ml-auto w-14"></div>
+            <div className="h-20 border border-neutral/30 rounded-md bg-base-100/70 absolute top-0 right-1/3 w-14 z-20"></div>
           </div>
         </div>
       </div>
@@ -112,23 +112,23 @@ export const GameLayout = () => {
         </div>
 
         {/* 中央卡牌区域 - 玩家战斗场 */}
-        <div className="absolute left-1/2 top-2/7 !-translate-x-1/2 !-translate-y-1/2">
-          <div className="w-16 h-24 border border-primary/30 rounded-md bg-base-100/70"></div>
+        <div className="absolute left-1/2 top-2/6 !-translate-x-1/2 !-translate-y-1/2">
+          <div className="w-18 h-26 border border-primary/30 rounded-md bg-base-100/70"></div>
         </div>
 
         {/* 玩家备战区 */}
-        <div className="absolute left-1/2 p-4 top-[55%] !-translate-x-1/2 !-translate-y-1/2">
+        <div className="absolute left-1/2 p-4 bottom-0 !-translate-x-1/2 !-translate-y-1/2">
           <div className="flex justify-center gap-2">
-            <div className="w-14 h-20 border border-primary/30 rounded-md bg-base-100/70"></div>
-            <div className="w-14 h-20 border border-primary/30 rounded-md bg-base-100/70"></div>
-            <div className="w-14 h-20 border border-primary/30 rounded-md bg-base-100/70"></div>
-            <div className="w-14 h-20 border border-primary/30 rounded-md bg-base-100/70"></div>
-            <div className="w-14 h-20 border border-primary/30 rounded-md bg-base-100/70"></div>
+            <div className="w-15 h-22 border border-primary/30 rounded-md bg-base-100/70"></div>
+            <div className="w-15 h-22 border border-primary/30 rounded-md bg-base-100/70"></div>
+            <div className="w-15 h-22 border border-primary/30 rounded-md bg-base-100/70"></div>
+            <div className="w-15 h-22 border border-primary/30 rounded-md bg-base-100/70"></div>
+            <div className="w-15 h-22 border border-primary/30 rounded-md bg-base-100/70"></div>
           </div>
         </div>
 
         {/* 玩家手牌区 */}
-        <div className="absolute left-1/2 bottom-4 !-translate-x-1/2">
+        <div className="absolute left-1/2 bottom-4 !-translate-x-1/2 !translate-y-3/5 hover:!translate-y-0 transition-transform duration-300">
           <div className="w-96 h-24 border border-primary/30 rounded-md bg-secondary/10 flex justify-center items-center">
             <span className="text-xs text-primary/70">手牌区</span>
           </div>

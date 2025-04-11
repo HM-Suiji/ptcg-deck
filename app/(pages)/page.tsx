@@ -3,7 +3,7 @@ import Link from 'next/link'
 export default function HomePage() {
   return (
     <>
-      <div className="hero bg-base-200 min-h-screen">
+      <div className="hero min-h-screen">
         <div className="hero-content text-center">
           <div className="max-w-xl">
             <h1 className="text-5xl font-bold bg-gradient-to-r from-(--color-primary) to-(--color-accent) text-transparent bg-clip-text mb-5">

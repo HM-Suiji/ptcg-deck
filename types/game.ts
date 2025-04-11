@@ -1,7 +1,7 @@
 /**
  * author: @HM-Suiji
  * description: Atom Type for PTCG Game
- * version: 0.1.0
+ * version: 0.1.1 (unsafe)
  */
 
 enum CardType {
@@ -57,45 +57,50 @@ interface Deck {
 }
 
 enum ActionType {
+  drawCard = 'drawCard', // 抽牌
+  playCard = 'playCard', // 使用牌
+  getCard = 'getCard', // 选牌
+  discard = 'discard', // 弃牌
   pass = 'pass', // 跳过回合
   supporter = 'supporter', // 使用支援者
-  attack = 'attack', // 攻击
-  retreat = 'retreat', // 撤退
+  skill = 'skill', // 使用技能
   transfer = 'transfer', // 宝可梦交换
   ability = 'ability', // 特性
+
+  // -- Expand Action Type --
+  retreat = 'retreat', // 撤退
   VStarEnergy = 'VStar energy', // VStar 力量
   attachEnergy = 'attach energy', // 填能
-  drawCard = 'draw card', // 抽牌
-  discardCard = 'discard card', // 弃牌
-  playCard = 'play card', // 使用牌
 }
 
-interface ParentAction<T extends ActionType> {
+// 序列化的动作
+type SerializedAction = {
   id: string
-  type: T
+  type: ActionType
+  cost: string[]
+  effect: string[]
 }
 
+// 反序列化的动作
 type Action =
   | {
       id: string
       type: ActionType.pass
-      parent?: ParentAction<ActionType.attack>
     }
   | {
       id: string
-      type: 'supporter'
+      type: ActionType.supporter
       cost: string[]
       effect: string[]
     }
   | {
       id: string
-      type: ActionType.attack
+      type: ActionType.skill
       name: string
       executePokemen: string
       currentDamage: number
       cost: string[]
       targets: { target: string; damage: number }[]
-      parent?: ParentAction<ActionType.VStarEnergy | ActionType.ability>
     }
   | {
       id: string
@@ -141,13 +146,7 @@ type Action =
   | {
       id: string
       target: string[]
-      type: ActionType.discardCard
-      parent: ParentAction<
-        | ActionType.attack
-        | ActionType.supporter
-        | ActionType.playCard
-        | ActionType.ability
-      >
+      type: ActionType.discard
     }
   | {
       id: string
@@ -165,4 +164,12 @@ interface Actions {
   actions: Action[]
 }
 
-export type { Card, Deck, Actions, Action, ActionType, CardType }
+export type {
+  Card,
+  Deck,
+  Actions,
+  SerializedAction,
+  Action,
+  ActionType,
+  CardType,
+}
